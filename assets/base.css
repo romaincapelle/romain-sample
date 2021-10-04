@@ -2304,8 +2304,3 @@ details-disclosure > details {
     stroke: CanvasText;
   }
 }
-
-/* Test Css change */
-a.header__heading-link.link.link--text.focus-inset {
-  background: purple;
-}
