@@ -1,0 +1,14 @@
+/* promo banner */
+.announcement-bar__message {
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  font-weight: bold;  
+  padding: 0.8rem 2rem;
+}
+
+@media screen and (min-width: 750px) {
+  .announcement-bar__message {
+    padding: 1.5rem 2rem;
+  }
+}
