@@ -98,6 +98,12 @@
               {%- if block.settings.button_label_2 != blank -%}
                 <a{% if block.settings.button_link_2 != blank %} href="{{ block.settings.button_link_2 }}"{% endif %} class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"{% if block.settings.button_link_2 == blank %} aria-disabled="true"{% endif %}>{{ block.settings.button_label_2 | escape }}</a>
               {%- endif -%}
+              {%- if block.settings.button_label_3 != blank -%}
+                <a{% if block.settings.button_link_3 != blank %} href="{{ block.settings.button_link_3 }}"{% endif %} class="button{% if block.settings.button_style_secondary_3 %} button--secondary{% else %} button--primary{% endif %}"{% if block.settings.button_link_3 == blank %} aria-disabled="true"{% endif %}>{{ block.settings.button_label_3 | escape }}</a>
+              {%- endif -%}
+              {%- if block.settings.button_label_4 != blank -%}
+                <a{% if block.settings.button_link_4 != blank %} href="{{ block.settings.button_link_4 }}"{% endif %} class="button{% if block.settings.button_style_secondary_4 %} button--secondary{% else %} button--primary{% endif %}"{% if block.settings.button_link_4 == blank %} aria-disabled="true"{% endif %}>{{ block.settings.button_label_4 | escape }}</a>
+              {%- endif -%}
             </div>
         {%- endcase -%}
       {%- endfor -%}
@@ -292,6 +298,42 @@
           "id": "button_style_secondary_2",
           "default": false,
           "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
+        },
+        {
+          "type": "text",
+          "id": "button_label_3",
+          "default": "Button label",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_3.label",
+          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_3.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_3",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_3.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary_3",
+          "default": false,
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_3.label"
+        },
+        {
+          "type": "text",
+          "id": "button_label_4",
+          "default": "Button label",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_4.label",
+          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_4.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_4",
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_4.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "button_style_secondary_4",
+          "default": false,
+          "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_4.label"
         }
       ]
     }

@@ -13,8 +13,6 @@
   padding-bottom: 2.1rem;
 }
 
-
-
 .header__heading-link {
   padding-top: 4px;
 }
@@ -172,7 +170,8 @@ label.field__label {
     grid-template-areas: 'heading navigation inline-search account icons';;
     grid-template-columns: auto 1fr auto auto;
     column-gap: 3.1rem;
-  }
-  
-  
+  } 
 }
+
+/* Image banner */
+
