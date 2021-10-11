@@ -13,17 +13,17 @@
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
+            "button_label_1": "WOMEN",
             "button_link_1": "shopify:\/\/collections\/all",
             "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
+            "button_label_2": "MEN",
+            "button_link_2": "shopify:\/\/collections\/all",
             "button_style_secondary_2": false,
-            "button_label_3": "Button label",
-            "button_link_3": "",
+            "button_label_3": "KIDS",
+            "button_link_3": "shopify:\/\/collections\/all",
             "button_style_secondary_3": false,
-            "button_label_4": "Button label",
-            "button_link_4": "",
+            "button_label_4": "HOME",
+            "button_link_4": "shopify:\/\/collections\/all",
             "button_style_secondary_4": false
           }
         }
