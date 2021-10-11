@@ -78,18 +78,17 @@
       >
     </div>
   {%- endif -%}
-  <div class="banner__content banner__content--{{ section.settings.desktop_text_box_position }} page-width">
-    <div class="banner__box color-{{ section.settings.color_scheme }}">
+  <div class="banner__content banner__content--{{ section.settings.desktop_text_box_position }} banner__content-align--{{ section.settings.desktop_text_box_alignment }} page-width">
+    <div class="banner__box">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
-            <h2 class="banner__heading {% if block.settings.heading_size == 'medium' %}h1{% else %}h0{% endif %}" {{ block.shopify_attributes }}>
+            <p class="banner__tagline">
+              <span>{{ block.settings.tagline | escape }}</span>
+            </p>
+            <h2 class="banner__heading">
               <span>{{ block.settings.heading | escape }}</span>
             </h2>
-          {%- when 'text' -%}
-            <div class="banner__text" {{ block.shopify_attributes }}>
-              <span>{{ block.settings.text | escape }}</span>
-            </div>
           {%- when 'buttons' -%}
             <div class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_link_1 != blank and block.settings.button_label_2 != blank and block.settings.button_link_2 != blank %} banner__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>
               {%- if block.settings.button_label_1 != blank -%}
@@ -152,6 +151,26 @@
       ],
       "default": "center",
       "label": "t:sections.image-banner.settings.desktop_text_box_position.label"
+    },
+    {
+      "type": "select",
+      "id": "desktop_text_box_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.image-banner.settings.desktop_text_box_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.image-banner.settings.desktop_text_box_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.image-banner.settings.desktop_text_box_alignment.options__3.label"
+        }
+      ],
+      "default": "left",
+      "label": "t:sections.image-banner.settings.desktop_text_box_alignment.label"
     },
     {
       "type": "checkbox",
@@ -224,24 +243,14 @@
         {
           "type": "text",
           "id": "heading",
-          "default": "Image banner",
+          "default": "50% OF EVERYTHING",
           "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
         },
         {
-          "type": "select",
-          "id": "heading_size",
-          "options": [
-            {
-              "value": "medium",
-              "label": "t:sections.image-banner.blocks.heading.settings.heading_size.options__1.label"
-            },
-            {
-              "value": "large",
-              "label": "t:sections.image-banner.blocks.heading.settings.heading_size.options__2.label"
-            }
-          ],
-          "default": "medium",
-          "label": "t:sections.image-banner.blocks.heading.settings.heading_size.label"
+          "type": "text",
+          "id": "tagline",
+          "default": "IN STORES & ONLINE",
+          "label": "t:sections.image-banner.blocks.heading.settings.tagline.label"
         }
       ]
     },

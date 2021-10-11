@@ -828,6 +828,18 @@
           },
           "label": "Desktop text position"
         },
+        "desktop_text_box_alignment": {
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          },
+          "label": "Desktop text position"
+        },
         "show_text_box": {
           "label": "Show text box on desktop"
         },
@@ -873,14 +885,8 @@
             "heading": {
               "label": "Heading"
             },
-            "heading_size": {
-              "options__1": {
-                "label": "Medium"
-              },
-              "options__2": {
-                "label": "Large"
-              },
-              "label": "Heading font size"
+            "tagline": {
+              "label": "Tagline"
             }
           }
         },
